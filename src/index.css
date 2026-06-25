@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0d0f1e;
+    color: #f1f5f9;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #13162a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #7c3aed;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8b5cf6;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-glow {
+    box-shadow:
+      0 0 0 1px rgba(124, 58, 237, 0.2),
+      0 4px 24px rgba(124, 58, 237, 0.1);
+  }
+
+  .card-glow:hover {
+    box-shadow:
+      0 0 0 1px rgba(139, 92, 246, 0.4),
+      0 8px 32px rgba(124, 58, 237, 0.2);
+  }
+
+  .mermaid-container svg {
+    max-width: 100%;
+    height: auto;
+    background: transparent !important;
+  }
+
+  .mermaid-container .node rect,
+  .mermaid-container .node circle,
+  .mermaid-container .node polygon {
+    fill: #1a1f3c !important;
+    stroke: #7c3aed !important;
+  }
+}
+
+/* Mermaid diagram dark styling */
+.mermaid-container .label {
+  color: #e2e8f0 !important;
+}
+
+.mermaid-container .edgePath .path {
+  stroke: #8b5cf6 !important;
+}
